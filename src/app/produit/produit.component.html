@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="produit.component.css">
+</head>
+<body>
+    
+    <fieldset>
+        <!-- Formulaire pour l'ajout de produit -->
+        <form  #formDirective="ngForm" (ngSubmit)="addproduit(titre.value, prix.value, formDirective)">
+            <!-- Input et label pour le titre -->
+            <div class="label_input">
+                <label for="titre">Ajouter le titre du produit</label>
+                <input type="text" name="titre" ngModel #titre="ngModel" id="titre" required>
+            </div>
+            <!-- Input et label pour la description -->
+            <div class="label_input">
+                <label for="prix">Ajouter le prix du produit</label>
+                <input type="text" name="prix" ngModel #prix="ngModel" id="prix" required>
+            </div>
+            <button type="submit">Ajouter</button>
+        </form>
+    </fieldset>
+
+    <!-- card des produits -->
+     <div class="les_cards">
+        <div class="card" *ngFor="let produit of produits ; index as i">
+            <h3>{{ produit.titre | uppercase  }}</h3>
+            <p>{{produit.prix | number:'1.2-2' }} EURO</p>
+             <button  (click)="select(produit)"class="boutton"  >Voir detail</button>
+
+             
+     </div>
+     </div>
+    
+</body>
+</html>

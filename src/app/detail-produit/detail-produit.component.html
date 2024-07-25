@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="detail-produit.component.css">
+</head>
+<body>
+    <div *ngIf="produit; else noProduct">
+        <h2>{{ produit.titre }}</h2>
+        <p>Prix: {{ produit.prix }} EURO</p>
+      </div>
+      <ng-template #noProduct>
+        <p>Aucun produit à afficher.</p>
+      </ng-template>
+      
+</body>
+</html>
