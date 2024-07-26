@@ -29,7 +29,7 @@
      <div class="les_cards">
         <div class="card" *ngFor="let produit of produits ; index as i">
             <h3>{{ produit.titre | uppercase  }}</h3>
-            <p>{{produit.prix | number:'1.2-2' }} EURO</p>
+            <p>{{produit.prix | currency:'EUR':'symbol':'1.2-2':'fr'}} </p>
              <button  (click)="select(produit)"class="boutton"  >Voir detail</button>
 
              

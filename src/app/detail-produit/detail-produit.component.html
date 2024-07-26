@@ -10,7 +10,7 @@
    
     <div *ngIf="produit" class="produit">
         <h2>{{ produit.titre }}</h2>
-        <p>Prix: {{ produit.prix }} EURO</p>
+        <p>Prix: {{ produit.prix | currency:'EUR':'symbol':'1.2-2':'fr'}} </p>
       </div>
       
 
