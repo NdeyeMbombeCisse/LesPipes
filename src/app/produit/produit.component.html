@@ -7,19 +7,19 @@
 <link rel="stylesheet" href="produit.component.css">
 </head>
 <body>
-    
     <fieldset>
+
         <!-- Formulaire pour l'ajout de produit -->
         <form  #formDirective="ngForm" (ngSubmit)="addproduit(titre.value, prix.value, formDirective)">
             <!-- Input et label pour le titre -->
             <div class="label_input">
                 <label for="titre">Ajouter le titre du produit</label>
-                <input type="text" name="titre" ngModel #titre="ngModel" id="titre" required>
+                <input type="text" name="titre" ngModel #titre="ngModel" id="titre" required placeholder="titre...">
             </div>
             <!-- Input et label pour la description -->
             <div class="label_input">
                 <label for="prix">Ajouter le prix du produit</label>
-                <input type="text" name="prix" ngModel #prix="ngModel" id="prix" required>
+                <input type="text" name="prix" ngModel #prix="ngModel" id="prix" required placeholder="description...">
             </div>
             <button type="submit">Ajouter</button>
         </form>
