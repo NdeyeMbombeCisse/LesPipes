@@ -1,19 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
     <link rel="stylesheet" href="detail-produit.component.css">
-</head>
-<body>
-    <div *ngIf="produit; else noProduct">
+  </head>
+  <body>
+   
+    <div *ngIf="produit" class="produit">
         <h2>{{ produit.titre }}</h2>
         <p>Prix: {{ produit.prix }} EURO</p>
       </div>
-      <ng-template #noProduct>
-        <p>Aucun produit à afficher.</p>
-      </ng-template>
       
-</body>
+
+   
+  </body>
 </html>
+    
+      
